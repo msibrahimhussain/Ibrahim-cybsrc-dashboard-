@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <h2>blueBox</h2>
+            <nav>
+                <ul>
+                    <li><a href="#" data-page="dashboard" class="active">Dashboard <i class="fas fa-tachometer-alt menu-icon"></i></a></li>
+                    <li><a href="#" data-page="ui-elements">UI Elements <i class="fas fa-layer-group menu-icon"></i></a></li>
+                    <li><a href="#" data-page="components">Components <i class="fas fa-cogs menu-icon"></i></a></li>
+                    <li><a href="#" data-page="forms-stuff">Forms Stuff <i class="fas fa-edit menu-icon"></i></a></li>
+                    <li><a href="#" data-page="data-table">Data Table <i class="fas fa-table menu-icon"></i></a></li>
+                    <li><a href="#" data-page="icons">Icons <i class="fas fa-icons menu-icon"></i></a></li>
+                    <li><a href="#" data-page="sample-page">Sample Page <i class="fas fa-file-alt menu-icon"></i></a></li>
+                    <li><a href="#" data-page="extra">Extra <i class="fas fa-ellipsis-h menu-icon"></i></a></li>
+                </ul>
+                <button class="add-project-btn">Add Project <i class="fas fa-plus-circle menu-icon"></i></button>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <header class="header">
+                <h1>Welcome to the Dashboard</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </header>
+
+            <section class="cards-container">
+                <div class="stat-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <div>
+                        <strong>$150,000</strong>
+                        <p>Stock Total</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <div>
+                        <strong>$25,000</strong>
+                        <p>Total Profit</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <strong>250,000</strong>
+                        <p>Unique Visitors</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="chart-section">
+                <h2><i class="fas fa-chart-line"></i> Performance Graph</h2>
+                <canvas id="chart"></canvas>
+            </section>
+
+            <section class="table-section">
+                <h2><i class="fas fa-table"></i> Standard Table Design</h2>
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>User Type</th>
+                            <th>Joined Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mike Brandt</td>
+                            <td>mikeb@mail.com</td>
+                            <td>Admin</td>
+                            <td>2023-04-25</td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>Andrew Strauss</td>
+                            <td>andrew@mail.com</td>
+                            <td>Editor</td>
+                            <td>2023-04-25</td>
+                            <td><span class="status approved">Approved</span></td>
+                        </tr>
+                        <tr>
+                            <td>Kevin Peterson</td>
+                            <td>kevinp@mail.com</td>
+                            <td>Admin</td>
+                            <td>2023-04-25</td>
+                            <td><span class="status rejected">Rejected</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
